@@ -35,25 +35,26 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.adaugareBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.codBox = new System.Windows.Forms.TextBox();
+            this.tipBox = new System.Windows.Forms.TextBox();
+            this.fcPret = new System.Windows.Forms.TextBox();
+            this.leaveDate = new System.Windows.Forms.DateTimePicker();
+            this.arriveDate = new System.Windows.Forms.DateTimePicker();
             this.leaveTime = new System.Windows.Forms.DateTimePicker();
             this.arriveTime = new System.Windows.Forms.DateTimePicker();
-            this.leaveTime2 = new System.Windows.Forms.DateTimePicker();
-            this.arriveTime2 = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.fcNr = new System.Windows.Forms.TextBox();
+            this.bcNr = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.orasPle = new System.Windows.Forms.TextBox();
+            this.orasSos = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.bcPret = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -98,9 +99,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(44, 264);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 16);
+            this.label5.Size = new System.Drawing.Size(51, 16);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Preț :";
+            this.label5.Text = "Prețuri :";
             // 
             // label7
             // 
@@ -120,38 +121,9 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "Ora de Sosire :";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(44, 436);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 16);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Reduceri :";
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(47, 479);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 20);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "Dus-Intors";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(47, 515);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(96, 20);
-            this.checkBox2.TabIndex = 10;
-            this.checkBox2.Text = "Last Minute";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
             // adaugareBtn
             // 
-            this.adaugareBtn.Location = new System.Drawing.Point(353, 470);
+            this.adaugareBtn.Location = new System.Drawing.Point(286, 471);
             this.adaugareBtn.Name = "adaugareBtn";
             this.adaugareBtn.Size = new System.Drawing.Size(163, 81);
             this.adaugareBtn.TabIndex = 11;
@@ -159,89 +131,89 @@
             this.adaugareBtn.UseVisualStyleBackColor = true;
             this.adaugareBtn.Click += new System.EventHandler(this.adaugareBtn_Click);
             // 
-            // textBox1
+            // codBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 123);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 12;
+            this.codBox.Location = new System.Drawing.Point(182, 123);
+            this.codBox.Name = "codBox";
+            this.codBox.Size = new System.Drawing.Size(100, 22);
+            this.codBox.TabIndex = 12;
             // 
-            // textBox2
+            // tipBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 168);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 13;
+            this.tipBox.Location = new System.Drawing.Point(182, 168);
+            this.tipBox.Name = "tipBox";
+            this.tipBox.Size = new System.Drawing.Size(100, 22);
+            this.tipBox.TabIndex = 13;
             // 
-            // textBox4
+            // fcPret
             // 
-            this.textBox4.Location = new System.Drawing.Point(182, 264);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 15;
+            this.fcPret.Location = new System.Drawing.Point(256, 264);
+            this.fcPret.Name = "fcPret";
+            this.fcPret.Size = new System.Drawing.Size(52, 22);
+            this.fcPret.TabIndex = 15;
+            // 
+            // leaveDate
+            // 
+            this.leaveDate.CustomFormat = "";
+            this.leaveDate.Location = new System.Drawing.Point(182, 350);
+            this.leaveDate.Name = "leaveDate";
+            this.leaveDate.Size = new System.Drawing.Size(267, 22);
+            this.leaveDate.TabIndex = 17;
+            this.leaveDate.ValueChanged += new System.EventHandler(this.leaveTime_ValueChanged);
+            // 
+            // arriveDate
+            // 
+            this.arriveDate.Location = new System.Drawing.Point(182, 395);
+            this.arriveDate.Name = "arriveDate";
+            this.arriveDate.Size = new System.Drawing.Size(267, 22);
+            this.arriveDate.TabIndex = 18;
             // 
             // leaveTime
             // 
-            this.leaveTime.CustomFormat = "";
-            this.leaveTime.Location = new System.Drawing.Point(182, 350);
+            this.leaveTime.Location = new System.Drawing.Point(473, 350);
             this.leaveTime.Name = "leaveTime";
-            this.leaveTime.Size = new System.Drawing.Size(267, 22);
-            this.leaveTime.TabIndex = 17;
-            this.leaveTime.ValueChanged += new System.EventHandler(this.leaveTime_ValueChanged);
+            this.leaveTime.Size = new System.Drawing.Size(69, 22);
+            this.leaveTime.TabIndex = 19;
             // 
             // arriveTime
             // 
-            this.arriveTime.Location = new System.Drawing.Point(182, 395);
+            this.arriveTime.Location = new System.Drawing.Point(473, 395);
             this.arriveTime.Name = "arriveTime";
-            this.arriveTime.Size = new System.Drawing.Size(267, 22);
-            this.arriveTime.TabIndex = 18;
-            // 
-            // leaveTime2
-            // 
-            this.leaveTime2.Location = new System.Drawing.Point(504, 350);
-            this.leaveTime2.Name = "leaveTime2";
-            this.leaveTime2.Size = new System.Drawing.Size(69, 22);
-            this.leaveTime2.TabIndex = 19;
-            // 
-            // arriveTime2
-            // 
-            this.arriveTime2.Location = new System.Drawing.Point(504, 394);
-            this.arriveTime2.Name = "arriveTime2";
-            this.arriveTime2.Size = new System.Drawing.Size(69, 22);
-            this.arriveTime2.TabIndex = 20;
+            this.arriveTime.Size = new System.Drawing.Size(69, 22);
+            this.arriveTime.TabIndex = 20;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(182, 213);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 16);
+            this.label10.Size = new System.Drawing.Size(68, 16);
             this.label10.TabIndex = 21;
-            this.label10.Text = "clasa I :";
+            this.label10.Text = "first calss :";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(521, 212);
+            this.label11.Location = new System.Drawing.Point(340, 213);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 16);
+            this.label11.Size = new System.Drawing.Size(102, 16);
             this.label11.TabIndex = 22;
-            this.label11.Text = "bussisnes class :";
+            this.label11.Text = "bussines class :";
             // 
-            // textBox3
+            // fcNr
             // 
-            this.textBox3.Location = new System.Drawing.Point(240, 213);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(34, 22);
-            this.textBox3.TabIndex = 23;
+            this.fcNr.Location = new System.Drawing.Point(256, 210);
+            this.fcNr.Name = "fcNr";
+            this.fcNr.Size = new System.Drawing.Size(34, 22);
+            this.fcNr.TabIndex = 23;
             // 
-            // textBox6
+            // bcNr
             // 
-            this.textBox6.Location = new System.Drawing.Point(636, 213);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(31, 22);
-            this.textBox6.TabIndex = 24;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.bcNr.Location = new System.Drawing.Point(455, 210);
+            this.bcNr.Name = "bcNr";
+            this.bcNr.Size = new System.Drawing.Size(31, 22);
+            this.bcNr.TabIndex = 24;
+            this.bcNr.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label6
             // 
@@ -255,50 +227,86 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(521, 304);
+            this.label12.Location = new System.Drawing.Point(365, 311);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(84, 16);
             this.label12.TabIndex = 26;
             this.label12.Text = "Oras Sosire :";
             // 
-            // textBox5
+            // orasPle
             // 
-            this.textBox5.Location = new System.Drawing.Point(182, 305);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 27;
+            this.orasPle.Location = new System.Drawing.Point(182, 305);
+            this.orasPle.Name = "orasPle";
+            this.orasPle.Size = new System.Drawing.Size(100, 22);
+            this.orasPle.TabIndex = 27;
             // 
-            // textBox7
+            // orasSos
             // 
-            this.textBox7.Location = new System.Drawing.Point(636, 304);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 22);
-            this.textBox7.TabIndex = 28;
+            this.orasSos.Location = new System.Drawing.Point(473, 305);
+            this.orasSos.Name = "orasSos";
+            this.orasSos.Size = new System.Drawing.Size(100, 22);
+            this.orasSos.TabIndex = 28;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(545, 257);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(28, 29);
+            this.label16.TabIndex = 34;
+            this.label16.Text = "€";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(182, 267);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(68, 16);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "first calss :";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(340, 267);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(102, 16);
+            this.label13.TabIndex = 36;
+            this.label13.Text = "bussines class :";
+            // 
+            // bcPret
+            // 
+            this.bcPret.Location = new System.Drawing.Point(455, 264);
+            this.bcPret.Name = "bcPret";
+            this.bcPret.Size = new System.Drawing.Size(52, 22);
+            this.bcPret.TabIndex = 37;
             // 
             // AirlineWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 582);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
+            this.ClientSize = new System.Drawing.Size(795, 582);
+            this.Controls.Add(this.bcPret);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.orasSos);
+            this.Controls.Add(this.orasPle);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.bcNr);
+            this.Controls.Add(this.fcNr);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.arriveTime2);
-            this.Controls.Add(this.leaveTime2);
             this.Controls.Add(this.arriveTime);
             this.Controls.Add(this.leaveTime);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.arriveDate);
+            this.Controls.Add(this.leaveDate);
+            this.Controls.Add(this.fcPret);
+            this.Controls.Add(this.tipBox);
+            this.Controls.Add(this.codBox);
             this.Controls.Add(this.adaugareBtn);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -322,24 +330,25 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Button adaugareBtn;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox codBox;
+        private System.Windows.Forms.TextBox tipBox;
+        private System.Windows.Forms.TextBox fcPret;
+        private System.Windows.Forms.DateTimePicker leaveDate;
+        private System.Windows.Forms.DateTimePicker arriveDate;
         private System.Windows.Forms.DateTimePicker leaveTime;
         private System.Windows.Forms.DateTimePicker arriveTime;
-        private System.Windows.Forms.DateTimePicker leaveTime2;
-        private System.Windows.Forms.DateTimePicker arriveTime2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox fcNr;
+        private System.Windows.Forms.TextBox bcNr;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox orasPle;
+        private System.Windows.Forms.TextBox orasSos;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox bcPret;
     }
 }

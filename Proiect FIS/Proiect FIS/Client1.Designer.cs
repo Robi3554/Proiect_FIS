@@ -35,8 +35,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dusBtn = new System.Windows.Forms.RadioButton();
-            this.intorsBtn = new System.Windows.Forms.RadioButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -45,6 +43,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.dusBtn = new System.Windows.Forms.RadioButton();
+            this.intBtn = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,28 +112,6 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Bussines Class :";
             // 
-            // dusBtn
-            // 
-            this.dusBtn.AutoSize = true;
-            this.dusBtn.Location = new System.Drawing.Point(101, 334);
-            this.dusBtn.Name = "dusBtn";
-            this.dusBtn.Size = new System.Drawing.Size(52, 20);
-            this.dusBtn.TabIndex = 7;
-            this.dusBtn.TabStop = true;
-            this.dusBtn.Text = "Dus";
-            this.dusBtn.UseVisualStyleBackColor = true;
-            // 
-            // intorsBtn
-            // 
-            this.intorsBtn.AutoSize = true;
-            this.intorsBtn.Location = new System.Drawing.Point(101, 373);
-            this.intorsBtn.Name = "intorsBtn";
-            this.intorsBtn.Size = new System.Drawing.Size(88, 20);
-            this.intorsBtn.TabIndex = 8;
-            this.intorsBtn.TabStop = true;
-            this.intorsBtn.Text = "Dus/Intors";
-            this.intorsBtn.UseVisualStyleBackColor = true;
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(221, 121);
@@ -171,11 +149,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(69, 410);
+            this.button1.Location = new System.Drawing.Point(101, 420);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(84, 47);
             this.button1.TabIndex = 14;
-            this.button1.Text = "Submit";
+            this.button1.Text = "Verificare Zbor";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
@@ -190,7 +168,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(69, 463);
+            this.button2.Location = new System.Drawing.Point(101, 473);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(84, 56);
             this.button2.TabIndex = 16;
@@ -198,11 +176,35 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // dusBtn
+            // 
+            this.dusBtn.AutoSize = true;
+            this.dusBtn.Location = new System.Drawing.Point(101, 350);
+            this.dusBtn.Name = "dusBtn";
+            this.dusBtn.Size = new System.Drawing.Size(52, 20);
+            this.dusBtn.TabIndex = 17;
+            this.dusBtn.TabStop = true;
+            this.dusBtn.Text = "Dus";
+            this.dusBtn.UseVisualStyleBackColor = true;
+            // 
+            // intBtn
+            // 
+            this.intBtn.AutoSize = true;
+            this.intBtn.Location = new System.Drawing.Point(101, 377);
+            this.intBtn.Name = "intBtn";
+            this.intBtn.Size = new System.Drawing.Size(60, 20);
+            this.intBtn.TabIndex = 18;
+            this.intBtn.TabStop = true;
+            this.intBtn.Text = "Intors";
+            this.intBtn.UseVisualStyleBackColor = true;
+            // 
             // Client1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 541);
+            this.Controls.Add(this.intBtn);
+            this.Controls.Add(this.dusBtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
@@ -211,8 +213,6 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.intorsBtn);
-            this.Controls.Add(this.dusBtn);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -237,8 +237,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton dusBtn;
-        private System.Windows.Forms.RadioButton intorsBtn;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
@@ -247,5 +245,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RadioButton dusBtn;
+        private System.Windows.Forms.RadioButton intBtn;
     }
 }

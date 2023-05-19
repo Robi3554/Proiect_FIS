@@ -56,7 +56,7 @@
             // 
             // CLIbut
             // 
-            this.CLIbut.Location = new System.Drawing.Point(419, 370);
+            this.CLIbut.Location = new System.Drawing.Point(403, 371);
             this.CLIbut.Name = "CLIbut";
             this.CLIbut.Size = new System.Drawing.Size(138, 79);
             this.CLIbut.TabIndex = 2;
