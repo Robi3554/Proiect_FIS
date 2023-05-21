@@ -70,12 +70,6 @@
     <Compile Include="Client1.Designer.cs">
       <DependentUpon>Client1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Client2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Client2.Designer.cs">
-      <DependentUpon>Client2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,9 +89,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Client1.resx">
       <DependentUpon>Client1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Client2.resx">
-      <DependentUpon>Client2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

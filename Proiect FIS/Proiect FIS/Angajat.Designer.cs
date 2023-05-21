@@ -28,25 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.ansBox = new System.Windows.Forms.TextBox();
+            this.telBox = new System.Windows.Forms.TextBox();
+            this.mailTxt = new System.Windows.Forms.TextBox();
+            this.prBox = new System.Windows.Forms.TextBox();
+            this.nuBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -56,7 +55,16 @@
             this.intBtn = new System.Windows.Forms.RadioButton();
             this.dusBtn = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
+            this.pleBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pretBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -67,6 +75,7 @@
             this.button2.TabIndex = 32;
             this.button2.Text = "Alege Zbor";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
@@ -84,6 +93,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(26, 22);
             this.textBox4.TabIndex = 29;
+            this.textBox4.Text = "0";
             // 
             // textBox3
             // 
@@ -91,6 +101,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(26, 22);
             this.textBox3.TabIndex = 28;
+            this.textBox3.Text = "0";
             // 
             // textBox2
             // 
@@ -98,6 +109,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(26, 22);
             this.textBox2.TabIndex = 27;
+            this.textBox2.Text = "0";
             // 
             // textBox1
             // 
@@ -105,13 +117,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(26, 22);
             this.textBox1.TabIndex = 26;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(182, 32);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 25;
+            this.textBox1.Text = "0";
             // 
             // label7
             // 
@@ -158,18 +164,9 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Numar de Locuri :";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 16);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Data Plecarii :";
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(520, 755);
+            this.button3.Location = new System.Drawing.Point(414, 531);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(153, 66);
             this.button3.TabIndex = 48;
@@ -177,40 +174,40 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBox6
+            // ansBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(170, 696);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(26, 22);
-            this.textBox6.TabIndex = 47;
+            this.ansBox.Location = new System.Drawing.Point(170, 696);
+            this.ansBox.Name = "ansBox";
+            this.ansBox.Size = new System.Drawing.Size(70, 22);
+            this.ansBox.TabIndex = 47;
             // 
-            // textBox5
+            // telBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(170, 643);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 46;
+            this.telBox.Location = new System.Drawing.Point(170, 643);
+            this.telBox.Name = "telBox";
+            this.telBox.Size = new System.Drawing.Size(111, 22);
+            this.telBox.TabIndex = 46;
             // 
-            // textBox7
+            // mailTxt
             // 
-            this.textBox7.Location = new System.Drawing.Point(170, 587);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(175, 22);
-            this.textBox7.TabIndex = 45;
+            this.mailTxt.Location = new System.Drawing.Point(170, 587);
+            this.mailTxt.Name = "mailTxt";
+            this.mailTxt.Size = new System.Drawing.Size(175, 22);
+            this.mailTxt.TabIndex = 45;
             // 
-            // textBox8
+            // prBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(170, 531);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(175, 22);
-            this.textBox8.TabIndex = 44;
+            this.prBox.Location = new System.Drawing.Point(170, 531);
+            this.prBox.Name = "prBox";
+            this.prBox.Size = new System.Drawing.Size(175, 22);
+            this.prBox.TabIndex = 44;
             // 
-            // textBox9
+            // nuBox
             // 
-            this.textBox9.Location = new System.Drawing.Point(170, 471);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(175, 22);
-            this.textBox9.TabIndex = 43;
+            this.nuBox.Location = new System.Drawing.Point(170, 471);
+            this.nuBox.Name = "nuBox";
+            this.nuBox.Size = new System.Drawing.Size(175, 22);
+            this.nuBox.TabIndex = 43;
             // 
             // label9
             // 
@@ -260,7 +257,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(43, 737);
+            this.radioButton1.Location = new System.Drawing.Point(414, 473);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(93, 20);
             this.radioButton1.TabIndex = 49;
@@ -271,18 +268,18 @@
             // intBtn
             // 
             this.intBtn.AutoSize = true;
-            this.intBtn.Location = new System.Drawing.Point(62, 266);
+            this.intBtn.Location = new System.Drawing.Point(16, 30);
             this.intBtn.Name = "intBtn";
-            this.intBtn.Size = new System.Drawing.Size(60, 20);
+            this.intBtn.Size = new System.Drawing.Size(88, 20);
             this.intBtn.TabIndex = 52;
             this.intBtn.TabStop = true;
-            this.intBtn.Text = "Intors";
+            this.intBtn.Text = "Dus/Intors";
             this.intBtn.UseVisualStyleBackColor = true;
             // 
             // dusBtn
             // 
             this.dusBtn.AutoSize = true;
-            this.dusBtn.Location = new System.Drawing.Point(63, 239);
+            this.dusBtn.Location = new System.Drawing.Point(17, 3);
             this.dusBtn.Name = "dusBtn";
             this.dusBtn.Size = new System.Drawing.Size(52, 20);
             this.dusBtn.TabIndex = 51;
@@ -298,22 +295,81 @@
             this.button1.TabIndex = 50;
             this.button1.Text = "Verificare Zbor";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pleBox
+            // 
+            this.pleBox.Location = new System.Drawing.Point(140, 30);
+            this.pleBox.Name = "pleBox";
+            this.pleBox.Size = new System.Drawing.Size(100, 22);
+            this.pleBox.TabIndex = 54;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(42, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 16);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "Oras Plecare :";
+            // 
+            // pretBox
+            // 
+            this.pretBox.Location = new System.Drawing.Point(312, 418);
+            this.pretBox.Name = "pretBox";
+            this.pretBox.ReadOnly = true;
+            this.pretBox.Size = new System.Drawing.Size(73, 22);
+            this.pretBox.TabIndex = 57;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(316, 421);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.TabIndex = 56;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(241, 421);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(65, 16);
+            this.label8.TabIndex = 55;
+            this.label8.Text = "Pret total :";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dusBtn);
+            this.panel1.Controls.Add(this.intBtn);
+            this.panel1.Location = new System.Drawing.Point(45, 232);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(142, 53);
+            this.panel1.TabIndex = 58;
             // 
             // Angajat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 998);
-            this.Controls.Add(this.intBtn);
-            this.Controls.Add(this.dusBtn);
+            this.ClientSize = new System.Drawing.Size(863, 753);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pretBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.pleBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.ansBox);
+            this.Controls.Add(this.telBox);
+            this.Controls.Add(this.mailTxt);
+            this.Controls.Add(this.prBox);
+            this.Controls.Add(this.nuBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
@@ -325,16 +381,17 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Name = "Angajat";
             this.Text = "Angajat";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,19 +405,17 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox ansBox;
+        private System.Windows.Forms.TextBox telBox;
+        private System.Windows.Forms.TextBox mailTxt;
+        private System.Windows.Forms.TextBox prBox;
+        private System.Windows.Forms.TextBox nuBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -370,5 +425,12 @@
         private System.Windows.Forms.RadioButton intBtn;
         private System.Windows.Forms.RadioButton dusBtn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox pleBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox pretBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

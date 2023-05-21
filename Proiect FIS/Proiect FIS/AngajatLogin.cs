@@ -26,10 +26,10 @@ namespace Proiect_FIS
                 errorProvider1.SetError(userBox, "Va rog introduceti un username valid!");
 
             }
-            else if (string.IsNullOrEmpty(passBox.Text))
+            else if (string.IsNullOrEmpty(txtPassword.Text))
             {
-                passBox.Focus();
-                errorProvider2.SetError(passBox, "Va rog introduceti o parola valida!");
+                txtPassword.Focus();
+                errorProvider2.SetError(txtPassword, "Va rog introduceti o parola valida!");
                 errorProvider1.Clear();
             }
             else
@@ -37,6 +37,29 @@ namespace Proiect_FIS
                 Form form = new Angajat();
                 form.ShowDialog();
                 this.Close();
+            }
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            txtPassword.Text = "";
+
+            txtPassword.ForeColor = Color.Black;
+
+            txtPassword.UseSystemPasswordChar = true;
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if (txtPassword.Text.Length == 0)
+            {
+                txtPassword.ForeColor = Color.Gray;
+
+                txtPassword.Text = "Enter password";
+
+                txtPassword.UseSystemPasswordChar = false;
+
+                SelectNextControl(txtPassword, true, true, false, true);
             }
         }
     }

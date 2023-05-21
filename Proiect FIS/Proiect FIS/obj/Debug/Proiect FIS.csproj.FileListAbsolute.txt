@@ -12,5 +12,4 @@ C:\Users\Robi\Desktop\AN 2\Sem 2\FIS\Proiect FIS\Proiect FIS\obj\Debug\Proiect F
 C:\Users\Robi\Desktop\AN 2\Sem 2\FIS\Proiect FIS\Proiect FIS\obj\Debug\Proiect FIS.pdb
 C:\Users\Robi\Desktop\AN 2\Sem 2\FIS\Proiect FIS\Proiect FIS\obj\Debug\Proiect_FIS.Angajat.resources
 C:\Users\Robi\Desktop\AN 2\Sem 2\FIS\Proiect FIS\Proiect FIS\obj\Debug\Proiect_FIS.Client1.resources
-C:\Users\Robi\Desktop\AN 2\Sem 2\FIS\Proiect FIS\Proiect FIS\obj\Debug\Proiect_FIS.Client2.resources
 C:\Users\Robi\Desktop\AN 2\Sem 2\FIS\Proiect FIS\Proiect FIS\obj\Debug\Proiect_FIS.AngajatLogin.resources

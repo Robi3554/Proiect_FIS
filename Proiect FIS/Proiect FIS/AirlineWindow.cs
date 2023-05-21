@@ -38,10 +38,9 @@ namespace Proiect_FIS
 
         private void adaugareBtn_Click(object sender, EventArgs e)
         {
-            if(codBox.Text != string.Empty || tipBox.Text != string.Empty || fcNr.Text != string.Empty ||
-                bcNr.Text != string.Empty || fcPret.Text != string.Empty || bcPret.Text != string.Empty ||
-                orasPle.Text != string.Empty || orasSos.Text != string.Empty || leaveDate.Text != string.Empty ||
-                leaveTime.Text != string.Empty || arriveDate.Text != string.Empty || arriveTime.Text != string.Empty)
+            if (codBox.Text != string.Empty && tipBox.Text != string.Empty && fcNr.Text != string.Empty &&
+                bcNr.Text != string.Empty && fcPret.Text != string.Empty && bcPret.Text != string.Empty &&
+                orasPle.Text != string.Empty && orasSos.Text != string.Empty)
             {
                 string connect = @"Data Source=DESKTOP-MER90VE\SQLEXPRESS;Initial Catalog=Aeroport;Integrated Security=True";
                 SqlConnection cnn = new SqlConnection(connect);
@@ -70,7 +69,6 @@ namespace Proiect_FIS
             {
                 MessageBox.Show("Introduceti toate datele!");
             }
-            
         }
     }
 }

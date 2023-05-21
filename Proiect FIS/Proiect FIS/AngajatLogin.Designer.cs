@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.userBox = new System.Windows.Forms.TextBox();
-            this.passBox = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -65,12 +65,14 @@
             this.userBox.Size = new System.Drawing.Size(176, 22);
             this.userBox.TabIndex = 2;
             // 
-            // passBox
+            // txtPassword
             // 
-            this.passBox.Location = new System.Drawing.Point(176, 178);
-            this.passBox.Name = "passBox";
-            this.passBox.Size = new System.Drawing.Size(176, 22);
-            this.passBox.TabIndex = 3;
+            this.txtPassword.Location = new System.Drawing.Point(176, 178);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(176, 22);
+            this.txtPassword.TabIndex = 3;
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // button1
             // 
@@ -96,7 +98,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(525, 393);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.passBox);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.userBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -114,7 +116,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox userBox;
-        private System.Windows.Forms.TextBox passBox;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
