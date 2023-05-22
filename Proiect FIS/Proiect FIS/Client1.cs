@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Net.Configuration;
+using System.Runtime.ExceptionServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -26,13 +27,17 @@ namespace Proiect_FIS
         private void button1_Click(object sender, EventArgs e)
         {
             //List<string> results = new List<string>();
+            int firstC = 0;
+            int bussinesC = 0;
 
 
             string connect = @"Data Source=DESKTOP-MER90VE\SQLEXPRESS;Initial Catalog=Aeroport;Integrated Security=True";
             SqlConnection con = new SqlConnection(connect);
             con.Open();
             SqlCommand check = new SqlCommand("select * from Cursa where Oras_plecare='" + pleBox.Text + "'", con);
-            SqlDataReader reader = check.ExecuteReader();
+            
+            
+            SqlDataReader reader = check.ExecuteReader();     
             if (reader.HasRows)
             {
                 reader.Close();
@@ -42,15 +47,53 @@ namespace Proiect_FIS
                 DataSet ds = new DataSet();
                 da.Fill(ds, "Cursa");
                 dataGridView1.DataSource = ds.Tables["Cursa"].DefaultView;
-                con.Close();
+                //con.Close();
                 da.Dispose();
                 ds.Dispose();
             }
             else
             {
                 MessageBox.Show("Nu sa gasit cursa!");
+                dataGridView1.DataSource = null;
+                dataGridView1.Rows.Clear();
             }
-            
+            SqlCommand locFc = new SqlCommand("select Nr_locuri_first_class from Cursa where Oras_plecare='" + pleBox.Text + "'", con);
+
+            SqlDataReader reader1 = locFc.ExecuteReader();
+            while (reader1.Read())
+            {
+                if (reader1["Nr_locuri_first_class"] != DBNull.Value)
+                {
+                    int locFcOrdinal = reader1.GetOrdinal("Nr_locuri_first_class");
+                    firstC = reader1.GetInt32(locFcOrdinal);
+                }
+                if (firstC < Int32.Parse(textBox3.Text))
+                {
+                    MessageBox.Show("Nu sa gasit cursa!");
+                    //reader1.Close();
+                    //reader1.Dispose();
+                }
+            }
+            reader1.Close();
+            reader1.Dispose();
+            SqlCommand locBc = new SqlCommand("select Nr_locuri_bussines_class from Cursa where Oras_plecare='" + pleBox.Text + "'", con);
+            SqlDataReader reader2 = locBc.ExecuteReader();
+            while (reader2.Read())
+            {
+                if (reader2["Nr_locuri_bussines_class"] != DBNull.Value)
+                {
+                    int locBcOrdinal = reader2.GetOrdinal("Nr_locuri_bussines_class");
+                    bussinesC = reader2.GetInt32(locBcOrdinal);
+                }
+                if (bussinesC < Int32.Parse(textBox4.Text))
+                {
+                    MessageBox.Show("Nu sa gasit cursa!");
+                    //reader1.Close();
+                    //reader1.Dispose();
+                }
+            }
+
+            con.Close();
             reader.Close();
             reader.Dispose();
         }
