@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Proiect_FIS.Angajat" Collapsed="true">
+    <Position X="5.75" Y="3" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>8iAgAEQAACgEABAAAACAAABSIAg5AgAAEHAAAQAAAEI=</HashCode>
+      <FileName>Angajat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proiect_FIS.AngajatLogin" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AggAAAAAACAAABAAAACAAAAGAAAIAAAABEAEgCAAAAA=</HashCode>
+      <FileName>AngajatLogin.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Angajat" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Proiect_FIS.Client1" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>7yAgAEAAACgEARAEAACAAABSIAg5AgAAEHAAAQAAAEI=</HashCode>
+      <FileName>Client1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proiect_FIS.Form1" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAABBAAAACAQBQCAAgACAEEAABAAAAAAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AirlineWindow" />
+      <Property Name="Client1" />
+      <Property Name="AngajatLogin" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Proiect_FIS.AirlineWindow" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>9CAAgAAAACABEhAAGACAUAAjAgAAAAAAAAAAQAEAAgA=</HashCode>
+      <FileName>AirlineWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

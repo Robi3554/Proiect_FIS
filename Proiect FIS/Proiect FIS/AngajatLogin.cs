@@ -18,6 +18,14 @@ namespace Proiect_FIS
             InitializeComponent();
         }
 
+        public Angajat Angajat
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(userBox.Text))

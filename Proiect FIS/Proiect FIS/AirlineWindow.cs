@@ -23,7 +23,6 @@ namespace Proiect_FIS
             arriveTime.ShowUpDown = true;
             arriveTime.Format = DateTimePickerFormat.Custom;
             arriveTime.CustomFormat = "HH:mm";
-            
         }
 
         private void leaveTime_ValueChanged(object sender, EventArgs e)

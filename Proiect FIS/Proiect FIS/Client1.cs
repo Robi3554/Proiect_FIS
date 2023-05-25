@@ -19,6 +19,7 @@ namespace Proiect_FIS
 {
     public partial class Client1 : Form
     {
+        int pretTotal;
         public Client1()
         {
             InitializeComponent();
@@ -53,7 +54,9 @@ namespace Proiect_FIS
             }
             else
             {
-                MessageBox.Show("Nu sa gasit cursa!");
+                reader.Close();
+                reader.Dispose();
+                MessageBox.Show("Nu s-a gasit cursa!");
                 dataGridView1.DataSource = null;
                 dataGridView1.Rows.Clear();
             }
@@ -69,7 +72,9 @@ namespace Proiect_FIS
                 }
                 if (firstC < Int32.Parse(textBox3.Text))
                 {
-                    MessageBox.Show("Nu sa gasit cursa!");
+                    dataGridView1.DataSource = null;
+                    dataGridView1.Rows.Clear();
+                    MessageBox.Show("Nu s-a gasit cursa!");
                     //reader1.Close();
                     //reader1.Dispose();
                 }
@@ -87,6 +92,8 @@ namespace Proiect_FIS
                 }
                 if (bussinesC < Int32.Parse(textBox4.Text))
                 {
+                    dataGridView1.DataSource = null;
+                    dataGridView1.Rows.Clear();
                     MessageBox.Show("Nu sa gasit cursa!");
                     //reader1.Close();
                     //reader1.Dispose();
@@ -158,7 +165,6 @@ namespace Proiect_FIS
             int nrCop = int.Parse(textBox2.Text);
             int fcPret = 0;
             int bcPret = 0;
-            int pretTotal;
 
             string connect = @"Data Source=DESKTOP-MER90VE\SQLEXPRESS;Initial Catalog=Aeroport;Integrated Security=True";
             SqlConnection con = new SqlConnection(connect);
@@ -178,14 +184,11 @@ namespace Proiect_FIS
                 }
                 if (intBtn.Checked == true)
                 {
-                    pretTotal = (nrCop * fcPret) - (nrCop * 100) + (nrAd * fcPret);
-                    pretTotal = pretTotal - pretTotal / 3;
-                    pretBox.Text = pretTotal.ToString();
+                    PretDusIntors(fcPret, nrAd, nrCop);
                 }
                 else
                 {
-                    pretTotal = (nrCop * fcPret) - (nrCop * 100) + (nrAd * fcPret);
-                    pretBox.Text = pretTotal.ToString();
+                    PretDus(fcPret, nrAd, nrCop);
                 }
             }
             else if (nrBc != 0)
@@ -201,16 +204,26 @@ namespace Proiect_FIS
                 }
                 if (intBtn.Checked == true)
                 {
-                    pretTotal = (nrCop * bcPret) - (nrCop * 100) + (nrAd * bcPret);
-                    pretTotal = pretTotal - pretTotal / 3;
-                    pretBox.Text = pretTotal.ToString();
+                    PretDusIntors(bcPret, nrAd, nrCop);
                 }
                 else
                 {
-                    pretTotal = (nrCop * bcPret) - (nrCop * 100) + (nrAd * bcPret);
-                    pretBox.Text = pretTotal.ToString();
+                    PretDus(bcPret, nrAd, nrCop);
                 }
             }
+        }
+
+        public void PretDus(int x, int y, int z)
+        {
+            pretTotal = (z * x) - (z * 100) + (y * x);
+            pretBox.Text = pretTotal.ToString();
+        }
+
+        public void PretDusIntors(int x, int y, int z)
+        {
+            pretTotal = (z * x) - (z * 100) + (y * x);
+            pretTotal = pretTotal - pretTotal / 3;
+            pretBox.Text = pretTotal.ToString();
         }
     }
 }

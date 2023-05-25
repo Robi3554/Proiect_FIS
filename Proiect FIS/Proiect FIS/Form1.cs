@@ -17,6 +17,30 @@ namespace Proiect_FIS
             InitializeComponent();
         }
 
+        public AirlineWindow AirlineWindow
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public Client1 Client1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public AngajatLogin AngajatLogin
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         private void COMPbut_Click(object sender, EventArgs e)
         {
             Form form = new AirlineWindow();

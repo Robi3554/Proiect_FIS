@@ -108,18 +108,18 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(44, 350);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 16);
+            this.label7.Size = new System.Drawing.Size(111, 16);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Ora de Plecare :";
+            this.label7.Text = "Data de Plecare :";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(44, 395);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 16);
+            this.label8.Size = new System.Drawing.Size(103, 16);
             this.label8.TabIndex = 7;
-            this.label8.Text = "Ora de Sosire :";
+            this.label8.Text = "Data de Sosire :";
             // 
             // adaugareBtn
             // 
